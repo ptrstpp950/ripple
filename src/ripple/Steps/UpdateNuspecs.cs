@@ -29,6 +29,8 @@ namespace ripple.Steps
             if(input.OverrideDependenciesFlag)
                 nuspec.ClearAllDependencies();
 
+            nuspec.ClearAllDependencies();
+
             group
                 .DetermineDependencies()
                 .Each(dependency =>
