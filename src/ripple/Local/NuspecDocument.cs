@@ -167,5 +167,11 @@ namespace ripple.Local
 
             element.SetAttributeValue("version", version);
         }
+
+        public void ClearAllDependencies()
+        {
+            var dependencies = _document.XPathSelectElement("//nuspec:dependencies", _xmlNamespaceManager);
+            dependencies.RemoveAll();
+        }
     }
 }

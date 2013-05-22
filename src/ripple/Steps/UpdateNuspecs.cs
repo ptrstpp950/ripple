@@ -26,6 +26,8 @@ namespace ripple.Steps
             var local = Solution.LocalDependencies();
             var nuspec = new NuspecDocument(spec.Filename);
 
+            nuspec.ClearAllDependencies();
+
             group
                 .DetermineDependencies()
                 .Each(dependency =>
