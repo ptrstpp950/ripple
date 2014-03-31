@@ -52,7 +52,8 @@ namespace ripple.Model
 
             var solutionFeeds = solution.Feeds.Select(x => x.GetNugetFeed()).ToArray();
 
-            if (RippleEnvironment.Connected() && !AllOffline(solutionFeeds))
+            //TODO: check if following if is enought
+            if (!AllOffline(solutionFeeds))
             {
                 foreach (var feed in solutionFeeds)
                 {
